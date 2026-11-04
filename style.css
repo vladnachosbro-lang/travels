@@ -479,6 +479,112 @@ img {
 }
 
 /* ============================================================
+   Сторінка «Про нас»
+   ============================================================ */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 100px;
+}
+
+.about-title {
+    margin: 0 0 24px 0;
+    font-size: 46px;
+    color: var(--dark);
+    text-align: center;
+}
+
+.about-text {
+    max-width: 760px;
+    margin: 0 0 48px 0;
+    color: var(--muted);
+    font-size: 17px;
+    text-align: center;
+}
+
+.about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.about-card {
+    flex: 1 1 300px;
+    padding: 32px;
+    background-color: #fff;
+    border: 1px solid rgba(17, 24, 39, 0.05);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.about-card-title {
+    margin: 0 0 10px 0;
+    color: #1c2b3a;
+    font-size: 22px;
+}
+
+.about-card-text {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+/* ============================================================
+   Сторінка «Галерея»
+   ============================================================ */
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 20px 100px;
+}
+
+.gallery-title {
+    margin: 0 0 36px 0;
+    font-size: 46px;
+    color: var(--dark);
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    aspect-ratio: 4 / 3;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item:hover .gallery-img {
+    transform: scale(1.06);
+}
+
+/* ============================================================
    Адаптивність
    ============================================================ */
 
@@ -493,6 +599,10 @@ img {
 
     .destination {
         width: calc(50% - 13px);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -509,6 +619,11 @@ img {
 
     .menu-item {
         margin: 0;
+    }
+
+    .menu-item-link {
+        padding: 8px 12px;
+        font-size: 13px;
     }
 
     .hero {
@@ -530,13 +645,17 @@ img {
     }
 
     .intro,
-    .destinations {
+    .destinations,
+    .about,
+    .gallery {
         padding: 60px 16px;
     }
 
     .intro-title,
     .destinations-title,
-    .contact-title {
+    .contact-title,
+    .about-title,
+    .gallery-title {
         font-size: 34px;
     }
 

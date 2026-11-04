@@ -40,7 +40,16 @@
     </section>
 
     <footer class="footer">
-        <p class="footer-info">&copy; 2024 Подорожі. Автор: Іванов І.М. Всі права захищено.</p>
+        <p class="footer-info">&copy; 2026 Подорожі. Автор: Влад Одинак. Всі права захищено.</p>
     </footer>
+
+    <script>
+        document.querySelector('.form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const button = this.querySelector('.form-button');
+            button.textContent = 'Ми відповімо вам найближчим часом!';
+            button.disabled = true;
+        });
+    </script>
 </body>
 </html>

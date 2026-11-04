@@ -472,6 +472,12 @@ img {
     transform: translateY(-2px);
 }
 
+.form-button:disabled {
+    background-color: var(--green);
+    cursor: default;
+    transform: none;
+}
+
 /* ============================================================
    Адаптивність
    ============================================================ */

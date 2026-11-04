@@ -12,13 +12,7 @@
 </head>
 <body>
     <header class="head">
-        <a href="index.html" class="brand">
-            <img src="img/logo.png" class="logo" alt="логотип">
-            <span class="brand-text">
-                <span class="brand-name">Подорожі</span>
-                <span class="brand-tagline">світ без кордонів</span>
-            </span>
-        </a>
+        <img src="img/logo.png" class="logo" alt="логотип">
         <nav class="menu">
             <ul class="menu-links">
                 <li class="menu-item"><a href="index.html" class="menu-item-link">Головна</a></li>
@@ -29,68 +23,24 @@
     </header>
 
     <section class="contact">
-        <div class="contact-grid">
-            <div class="contact-info">
-                <p class="section-eyebrow">Ми на зв'язку</p>
-                <h2 class="contact-title">Контакти</h2>
-                <p class="contact-text">Маєте запитання або хочете забронювати тур? Напишіть нам — відповімо протягом однієї години.</p>
+        <h2 class="contact-title">Контакти</h2>
 
-                <ul class="contact-list">
-                    <li class="contact-item">
-                        <span class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                        </span>
-                        <span><strong>Адреса</strong><br>м. Київ, вул. Хрещатик, 1</span>
-                    </li>
-                    <li class="contact-item">
-                        <span class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
-                        </span>
-                        <span><strong>Телефон</strong><br><a href="tel:+380441234567">+38 (044) 123-45-67</a></span>
-                    </li>
-                    <li class="contact-item">
-                        <span class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-                        </span>
-                        <span><strong>Електронна пошта</strong><br><a href="mailto:hello@podorozhi.ua">hello@podorozhi.ua</a></span>
-                    </li>
-                    <li class="contact-item">
-                        <span class="contact-icon">
-                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-                        </span>
-                        <span><strong>Графік роботи</strong><br>Пн–Пт: 9:00–19:00, Сб: 10:00–16:00</span>
-                    </li>
-                </ul>
-            </div>
+        <form class="form" action="#" method="post">
+            <label class="form-label" for="name">Ім'я</label>
+            <input class="form-input" type="text" id="name" name="name" required>
 
-            <form class="form" id="contactForm" action="#" method="post">
-                <h3 class="form-title">Напишіть нам</h3>
+            <label class="form-label" for="email">Електронна пошта</label>
+            <input class="form-input" type="email" id="email" name="email" required>
 
-                <label class="form-label" for="name">Ім'я</label>
-                <input class="form-input" type="text" id="name" name="name" placeholder="Ваше ім'я" required>
+            <label class="form-label" for="message">Повідомлення</label>
+            <textarea class="form-textarea" id="message" name="message" required></textarea>
 
-                <label class="form-label" for="email">Електронна пошта</label>
-                <input class="form-input" type="email" id="email" name="email" placeholder="example@mail.com" required>
-
-                <label class="form-label" for="message">Повідомлення</label>
-                <textarea class="form-textarea" id="message" name="message" placeholder="Розкажіть, про яку подорож мрієте" required></textarea>
-
-                <button class="form-button" type="submit">Відправити</button>
-                <p class="form-note" id="formNote" hidden>Дякуємо! Ваше повідомлення надіслано — ми зв'яжемося з вами найближчим часом.</p>
-            </form>
-        </div>
+            <button class="form-button" type="submit">Відправити</button>
+        </form>
     </section>
 
     <footer class="footer">
         <p class="footer-info">&copy; 2024 Подорожі. Автор: Іванов І.М. Всі права захищено.</p>
     </footer>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function (event) {
-            event.preventDefault();
-            this.reset();
-            document.getElementById('formNote').hidden = false;
-        });
-    </script>
 </body>
 </html>
